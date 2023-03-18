@@ -1,3 +1,4 @@
 express-locallibrary-tutorial/node_modules/
 express-locallibrary-tutorial/node_modules/*
 express-locallibrary-tutorial/mongoDB_credentials.txt
+mongoDB_credentials.txt

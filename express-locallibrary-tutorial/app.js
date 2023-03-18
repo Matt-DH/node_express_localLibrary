@@ -43,17 +43,13 @@ const fs = require('fs');
 const readline = require('readline');
 
 // Load client secrets from a local file.
-fs.readFile('mongoDB_credentials.txt', (err, content) => {
+fs.readFile('../mongoDB_credentials.txt', (err, content) => {
   if (err) return console.log('Error loading client secret file:', err);
   else {
     const lines = content.toString().split("\n");
     mdbUser = lines[0].trim();
     mdbPass = lines[1].trim();
     mdbDbName = lines[2].trim();
-    // Print each variable
-    console.log("mdbUser: " + mdbUser);
-    console.log("mdbPass: " + mdbPass);
-    console.log("mdbDbName: " + mdbDbName);
 
     mongoose.set("strictQuery", "false");
     const mongoDB = "mongodb+srv://" + mdbUser + ":" + mdbPass + "@cluster0.qgbv6pr.mongodb.net/" + mdbDbName + "?retryWrites=true&w=majority";
