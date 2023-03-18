@@ -28,7 +28,7 @@ app.use("/users", usersRouter);
 app.use("/catalog", catalogRouter); // Add catalog routes to middleware chain.
 
 // Mongoose server setup
-const mdbUser = "<USERNAME"
+const mdbUser = "<USERNAME>"
 const mdbPass = "<PASSWORD>"
 const mdbDbName = "<DB_NAME>";
 mongoose.set("strictQuery", "false");
